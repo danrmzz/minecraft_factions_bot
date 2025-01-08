@@ -1,0 +1,1 @@
+npm install discord.js@12.5.3 && npm install mathjs && npm install mineflayer && npm install mineflayer-tps && npm install moment && npm install ms@2.1.3
