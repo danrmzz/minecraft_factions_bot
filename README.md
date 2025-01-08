@@ -43,3 +43,40 @@ Follow these steps to set up the bot:
 
 
 
+# Features of the Bot
+
+- **Wall Management**:
+  - Commands to mark walls as clear or raise "WeeWoo" alerts during a raid.
+  - Automatic wall check reminders sent to Discord and in-game.
+  - Reminders are automatically disabled during shield downtimes.
+
+- **Buffer Management**:
+  - Commands to mark buffers as clear or alert for suspicious activity.
+  - Reminders for buffer checks, including details of the last checker.
+  - Reminders are automatically disabled during shield downtimes.
+
+- **Cactus Management**:
+  - Commands to mark cactus walls as clear or raise "WeeWoo" alerts for raids.
+  - Reminders for cactus wall checks.
+
+- **Faction Value Management**:
+  - Tracks the value contributed by users to the faction.
+  - Users can log their contributions, and the bot maintains a running total for each user.
+
+- **Strike System**:
+  - Commands to add or remove strikes for players, with reasons and total strikes displayed.
+ 
+- **Faction Top Updates**:
+  - Automatically retrieves and displays faction top (`/f top`) updates in a designated Discord channel.
+  - Provides clear rankings, faction values, and changes since the last update.
+
+- **Faction Chat Logging**:
+  - Logs in-game faction chat messages directly to a designated Discord channel.
+  - Allows users to send messages to in-game faction chat from Discord.
+
+- **Roles and Permissions**:
+  - Configurable role based permissions for accessing bot features.
+
+
+
+
