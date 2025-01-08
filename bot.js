@@ -1692,6 +1692,10 @@ else {
             if (isRegExpFormat(msg, /^\(!\) (Online|Offline): \w{2,16}$/) && settings.fchatenabled) {
                 fchatchannel.send(`\`${msg}\``).catch(console.error);
             }
+            // Check for faction rotation
+            if (isRegExpFormat(msg, /^\(!\) \w{2,16} has been rotated out for \w{2,16}!$/) && settings.fchatenabled) {
+                fchatchannel.send(`\`${msg}\``).catch(console.error);
+            }
 
         })
 
