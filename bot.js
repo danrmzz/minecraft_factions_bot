@@ -1648,16 +1648,24 @@ else {
 
             if (ftop && (isRegExpFormat(msg, realms[hardconfig.realm].ftop))) {
                 text = msg.match(realms[hardconfig.realm].ftop);
-                var pos = text[1];
-                var facname = text[2];
-                var value = text[3];
-                var increase = text[4];
-
+                var pos = text[1]; // Rank (e.g., #1)
+                var facname = text[2]; // Faction name (e.g., Pluto)
+                var value = text[3]; // Total value (e.g., $1,015,519,095,470)
+                var increase = text[4]; // Change (e.g., $2,418,000,000 or -$374,431,216)
+            
+                // Determine if the increase should be negative
+                const percentChangeRegex = /\[. (-?[\d.]+%)\]/;
+                const percentMatch = msg.match(percentChangeRegex);
+                if (percentMatch && percentMatch[1].startsWith('-')) {
+                    // If the percentage is negative, prepend a negative sign to the increase
+                    increase = `-${increase}`;
+                }
+            
                 dataone.push(`**${pos}** ${facname}`);
                 datatwo.push(`${value}`);
                 datathree.push(`${increase}`);
-
             }
+
             if (runcmd) {
                 runcmddata.push(msg)
             }
